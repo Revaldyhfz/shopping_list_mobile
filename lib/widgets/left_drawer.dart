@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_list/screens/menu.dart';
+import 'package:shopping_list/screens/list_product.dart';
 
 import 'package:shopping_list/screens/shoplist_form.dart';
 class LeftDrawer extends StatelessWidget {
@@ -52,6 +53,17 @@ class LeftDrawer extends StatelessWidget {
                     builder: (context) => MyHomePage(),
                   ));
             },
+          ),
+          ListTile(
+          leading: const Icon(Icons.shopping_basket),
+          title: const Text('Product List'),
+          onTap: () {
+                  // Route menu to product page
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProductPage()),
+                  );
+              },
           ),
           ListTile(
             leading: const Icon(Icons.add_shopping_cart),
